@@ -69,9 +69,9 @@ best for learning new languages.
 Each directory inside the `src/` directory presents exercises revolving around a
 particular concept in Python. Not all of these concepts are unique to Python (in
 fact, most probably aren't). This means that you can leverage knowledge you've
-obtained via exposure to other programming languages towards learning Python. 
+obtained via exposure to other programming languages towards learning Python.
 
-The suggested order for going through each of the directories is: 
+The suggested order for going through each of the directories is:
 
 * `hello` -- Hello world
 * `bignum` -- Print some big numbers
