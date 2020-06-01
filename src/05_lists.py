@@ -29,5 +29,5 @@ print(x+y)
 print(len(x))
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
-for nums in x:
-  print(nums * 1000)
+for i, nums in enumerate(x):
+  print(f'index: {i}, nums: {nums*1000}')
