@@ -52,10 +52,5 @@ waypoints[3].update({ "lon": -130, "name": "not a real place" })
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
 
-# print out each waypoint 
 for wp in waypoints: 
     print(wp.values())
-    # print out values of each key
-
-# loop over each dict in list 
-# print out each dict value 
