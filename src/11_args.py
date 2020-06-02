@@ -57,17 +57,20 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
+def f4(**kwargs):
+    for k, v in kwargs.items():
+        print(f"key: {k}, value: {v}")
 
 # Should print
 # key: a, value: 12
 # key: b, value: 30
-# f4(a=12, b=30)
+f4(a=12, b=30)
 
 # Should print
 # key: city, value: Berkeley
 # key: population, value: 121240
 # key: founded, value: "March 23, 1868"
-# f4(city="Berkeley", population=121240, founded="March 23, 1868")
+f4(city="Berkeley", population=121240, founded="March 23, 1868")
 
 d = {
     "monster": "goblin",
@@ -75,4 +78,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-# f4(d)
+f4(**d)
