@@ -38,10 +38,18 @@ x = input("Enter comma-separated numbers: ").split(',')
 # What do you need between the square brackets to make it work?
 y = [ x for x in range(len(x)) if x % 2 == 0] 
 
-print(y)
+print(f'Only even numbers of user input: {y}')
 
 # Use a list comprehension to create a list containing on the cube root
 # of all _even_ elements the user entered into list x.
 y = [ x**3 for x in range(len(x)) if x % 2 == 0] 
 
-print(y)
+print(f'Only even numbers, Cube of user input: {y}')
+
+# Use a list comprehension in a function
+def double(x):
+  return x*2
+
+d = [double(x) for x in range(10)]
+
+print(f'Using a list comp in a function: {d}')
