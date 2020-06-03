@@ -32,18 +32,27 @@ import calendar
 from datetime import datetime
 from datetime import date
 
-month_input = input("Enter a month: ")
-year_input = input("Enter a year: ")
+num_args = len(sys.argv)
 
-# If user input is empty use datetime.now()
-if month_input == '':
-  current_date = date.today()
-  month = int(current_date.strftime("%d"))
-  year = int(current_date.strftime("%y") + '20')
-  print(month)
-  print(year)
-  
-  print(calendar.month(year,month))
+# init instance of text calendar class
+cal = calendar.TextCalendar()
 
 
-# print(calendar.month(year_input)
+if num_args == 1:
+  month = datetime.now().month
+  year = datetime.now().year
+
+  cal.prmonth(year, month)
+elif num_args == 2:
+  month = int(sys.argv[1])
+  year = datetime.now().year
+
+  cal.prmonth(year, month)
+elif num_args == 3:
+  month = int(sys.argv[1])
+  year = int(sys.argv[2])
+
+  cal.prmonth(year,month)
+else: 
+  print("usage: cal.py [month] [year]")
+  sys.exit(1)
