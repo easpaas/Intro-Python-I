@@ -37,22 +37,21 @@ num_args = len(sys.argv)
 # init instance of text calendar class
 cal = calendar.TextCalendar()
 
+# Current date - month and year
+month = datetime.now().month
+year = datetime.now().year
 
 if num_args == 1:
-  month = datetime.now().month
-  year = datetime.now().year
-
-  cal.prmonth(year, month)
+  pass
 elif num_args == 2:
   month = int(sys.argv[1])
-  year = datetime.now().year
-
-  cal.prmonth(year, month)
+  # year = datetime.now().year
 elif num_args == 3:
   month = int(sys.argv[1])
   year = int(sys.argv[2])
-
-  cal.prmonth(year,month)
 else: 
   print("usage: cal.py [month] [year]")
   sys.exit(1)
+
+cal.prmonth(year, month)
+
