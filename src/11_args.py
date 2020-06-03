@@ -37,12 +37,12 @@ print(f2(*a,))   # Should print 22
 
 # YOUR CODE HERE
 def f3(a=None,b=None):
-  if (a and not b):
-    return a + 1
-  elif (b and not a):
-    return b + 1
-  else:
-    return a + b
+    if (a and not b):
+        return a + 1
+    elif (b and not a):
+        return b + 1
+    else:
+        return a + b
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
